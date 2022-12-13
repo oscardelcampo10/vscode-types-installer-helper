@@ -1,0 +1,55 @@
+{
+  "name": "vscode-types-installer-helper",
+  "displayName": "Types Installer Helper",
+  "description": "Help install @types modules",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-types-installer-helper.helloWorld"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-types-installer-helper.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.29.0",
+    "glob": "^8.0.3",
+    "install": "^0.13.0",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.4",
+    "typescriptnpm": "^1.0.1"
+  },
+  "dependencies": {
+    "@types/eslint": "^8.4.10",
+    "@types/express": "^4.17.14",
+    "@types/typescript": "^2.0.0",
+    "colors": "1.4.0",
+    "express": "4.17.1",
+    "tfjs": "^0.6.0"
+  }
+}
